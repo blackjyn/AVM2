@@ -31,3 +31,17 @@
 # Debug files
 *.dSYM/
 *.su
+
+# VS15
+*.sln
+*.db
+*.opendb
+*.vcxproj
+*.filters
+*.user
+.vs
+tests
+Debug
+
+# temprorary
+*.abc

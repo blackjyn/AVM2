@@ -9,7 +9,7 @@ avm_script* script_load(const char* fn) {
 	ret->size = ftell(f);
 	fseek(f, 0, SEEK_SET);
 
-    ret->buffer = malloc(ret->size * sizeof(unsigned char));
+    ret->buffer = malloc(ret->size * sizeof(byte));
 	fread(ret->buffer, ret->size, 1, f);
 	fclose(f);
 

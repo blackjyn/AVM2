@@ -10,7 +10,7 @@ struct namespace_opcode {
 	opcode_type astypelate;
 	opcode_type bitand;
 	opcode_type bitnot;
-	opcode_type bitor ;
+	opcode_type bitor;
 	opcode_type bitxor;
 	opcode_type bkpt;
 	opcode_type bkptline;

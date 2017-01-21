@@ -2,8 +2,7 @@
 #define __AVM2_SCRIPT__
 #include <avm2/DataTypes.h>
 
-typedef struct
-{
+typedef struct {
 	byte* buffer;
 	unsigned int size;
 } avm_script;

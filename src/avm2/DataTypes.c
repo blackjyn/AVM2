@@ -37,8 +37,6 @@ u30 u30_read(byte** buf)
 		ret |= (c & 0x7F) << (((*buf)-s) * 7);
 	} while ((c & 0x80) && ((*buf) - s) < 5);
 
-	printf("read %d bytes", (*buf) - s);
-
 	return ret;
 }
 

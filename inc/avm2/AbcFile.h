@@ -25,4 +25,7 @@ typedef struct
 	method_body_info* method_body;
 } abc_file;
 
+void abc_free(abc_file* abc);
+abc_file* abc_parse(byte* buffer);
+
 #endif //__AVM2_ABC_FILE__

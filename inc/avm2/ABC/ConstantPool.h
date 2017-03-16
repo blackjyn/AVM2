@@ -23,4 +23,6 @@ typedef struct {
 	multiname_info* multiname; // [0] is not present
 } cpool_info;
 
+cpool_info* cpool_parse(byte** src); // read constant pool data from source
+
 #endif //__AVM2_CONSTANT_POOL__

@@ -10,16 +10,19 @@ typedef struct {
 multiname_info multiname_info_read(char** buf);
 void multiname_info_release(multiname_info* nsi);
 
-const u8 MNKIND_QName = 0x07;
-const u8 MNKIND_QNameA = 0x0D;
-const u8 MNKIND_RTQName = 0x0F;
-const u8 MNKIND_RTQNameA = 0x10;
-const u8 MNKIND_RTQNameL = 0x11;
-const u8 MNKIND_RTQNameLA = 0x12;
-const u8 MNKIND_Multiname = 0x09;
-const u8 MNKIND_MultinameA = 0x0E;
-const u8 MNKIND_MultinameL = 0x1B;
-const u8 MNKIND_MultinameLA = 0x1C;
+typedef enum
+{
+	MNKIND_QName = 0x07,
+	MNKIND_QNameA = 0x0D,
+	MNKIND_RTQName = 0x0F,
+	MNKIND_RTQNameA = 0x10,
+	MNKIND_RTQNameL = 0x11,
+	MNKIND_RTQNameLA = 0x12,
+	MNKIND_Multiname = 0x09,
+	MNKIND_MultinameA = 0x0E,
+	MNKIND_MultinameL = 0x1B,
+	MNKIND_MultinameLA = 0x1C
+} MNKIND;
 
 /*
 QName: { u30 ns, u30 name }

@@ -22,22 +22,31 @@ typedef struct {
 	traits_info* trait;
 } instance_info;
 
-const u8 INSTANCE_ClassSealed = 0x01;
-const u8 INSTANCE_ClassFinal = 0x02;
-const u8 INSTANCE_ClassInterface = 0x04;
-const u8 INSTANCE_ClassProtectedNs = 0x08;
+typedef enum
+{
+	INSTANCE_ClassSealed = 0x1,
+	INSTANCE_ClassFinal = 0x02,
+	INSTANCE_ClassInterface = 0x04,
+	INSTANCE_ClassProtectedNs = 0x08
+} INSTANCE;
 
-const u8 TRAIT_Slot = 0;
-const u8 TRAIT_Method = 1;
-const u8 TRAIT_Getter = 2;
-const u8 TRAIT_Setter = 3;
-const u8 TRAIT_Class = 4;
-const u8 TRAIT_Function = 5;
-const u8 TRAIT_Const = 6;
+typedef enum
+{
+	TRAIT_Slot,
+	TRAIT_Method,
+	TRAIT_Getter,
+	TRAIT_Setter,
+	TRAIT_Class,
+	TRAIT_Function,
+	TRAIT_Const
+} TRAIT;
 
-const u8 ATTR_Final = 0x1;
-const u8 ATTR_Override = 0x2;
-const u8 ATTR_Metadata = 0x4;
+typedef enum
+{
+	ATTR_Final = 0x1,
+	ATTR_Override = 0x2,
+	ATTR_Metadata = 0x4
+} ATTR;
 
 /*
 Slot/Const: { u30 slot_id, u30 type_name, u30 vindex, u8 vkind  }

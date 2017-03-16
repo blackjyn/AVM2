@@ -11,12 +11,15 @@ typedef struct {
 	u30 name; // an index in the string array (in the constant pool)
 } namespace_info;
 
-const u8 NSKIND_Namespace			= 0x08;
-const u8 NSKIND_PackageNamespace	= 0x16;
-const u8 NSKIND_PackageInternalNs	= 0x17;
-const u8 NSKIND_ProtectedNamespace	= 0x18;
-const u8 NSKIND_ExplicitNamespace	= 0x19;
-const u8 NSKIND_StaticProtectedNs	= 0x1A;
-const u8 NSKIND_PrivateNs			= 0x05;
+typedef enum
+{
+	NSKIND_Namespace = 0x08,
+	NSKIND_PackageNamespace = 0x16,
+	NSKIND_PackageInternalNs = 0x17,
+	NSKIND_ProtectedNamespace = 0x18,
+	NSKIND_ExplicitNamespace = 0x19,
+	NSKIND_StaticProtectedNs = 0x1A,
+	NSKIND_PrivateNs = 0x05
+} NSKIND;
 
 #endif //__AVM2_NAMESPACE_INFO__
